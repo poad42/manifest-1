@@ -2,11 +2,28 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
-           review="https://android-review.googlesource.com/" />
-  <default revision="nougat-dev"
-           remote="aosp"
-           sync-j="4" />
+           fetch="https://android.googlesource.com" />
+
+  <remote  name="caf"
+           fetch="https://source.codeaurora.org/quic/la/" />
+
+  <remote  name="stoned"
+           fetch="https://github.com/StonedOSP"
+           revision="n" />
+
+  <remote  name="papers"
+           fetch="https://github.com/Stoned-Devices"
+           revision="n" />
+
+  <remote  name="github"
+           fetch="https://github.com" />
+
+  <remote  name="uber"
+           fetch="https://bitbucket.org/DespairFactor"/>
+
+  <default revision="refs/tags/LA.UM.5.5.r1-00500-8x96.0"
+           remote="caf"
+           sync-j="8" />
 
   <project path="build" name="platform/build" groups="pdk,tradefed" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -24,11 +41,7 @@
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs,pdk-fs" />
   <project path="developers/build" name="platform/developers/build" />
-  <project path="developers/demos" name="platform/developers/demos" />
-  <project path="developers/samples/android" name="platform/developers/samples/android" />
   <project path="development" name="platform/development" groups="pdk-cw-fs,pdk-fs" />
-  <project path="device/asus/fugu" name="device/asus/fugu" groups="device,fugu,broadcom_pdk" />
-  <project path="device/asus/fugu-kernel" name="device/asus/fugu-kernel" groups="device,fugu,broadcom_pdk" clone-depth="1" />
   <project path="device/common" name="device/common" groups="pdk-cw-fs,pdk-fs" />
   <project path="device/generic/arm64" name="device/generic/arm64" groups="pdk" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
@@ -45,25 +58,6 @@
   <project path="device/generic/qemu" name="device/generic/qemu" />
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" />
   <project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" />
-  <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
-  <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
-  <project path="device/google/atv" name="device/google/atv" groups="device,fugu,broadcom_pdk,generic_fs" />
-  <project path="device/google/contexthub" name="device/google/contexthub" groups="device" />
-  <project path="device/google/dragon" name="device/google/dragon" groups="device,dragon" />
-  <project path="device/google/dragon-kernel" name="device/google/dragon-kernel" groups="device,dragon" clone-depth="1" />
-  <project path="device/htc/flounder" name="device/htc/flounder" groups="device,flounder,broadcom_pdk" />
-  <project path="device/htc/flounder-kernel" name="device/htc/flounder-kernel" groups="device,flounder,broadcom_pdk" clone-depth="1" />
-  <project path="device/huawei/angler" name="device/huawei/angler" groups="device,angler,broadcom_pdk" />
-  <project path="device/huawei/angler-kernel" name="device/huawei/angler-kernel" groups="device,angler,broadcom_pdk" clone-depth="1" />
-  <project path="device/intel/edison" name="device/intel/edison" groups="device" />
-  <project path="device/lge/bullhead" name="device/lge/bullhead" groups="device,bullhead" />
-  <project path="device/lge/bullhead-kernel" name="device/lge/bullhead-kernel" groups="device,bullhead" clone-depth="1" />
-  <project path="device/linaro/hikey" name="device/linaro/hikey" />
-  <project path="device/linaro/hikey-kernel" name="device/linaro/hikey-kernel" clone-depth="1" />
-  <project path="device/moto/shamu" name="device/moto/shamu" groups="device,shamu,broadcom_pdk" />
-  <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu,broadcom_pdk" clone-depth="1" />
-  <project path="device/sample" name="device/sample" groups="pdk" />
-  <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/adt-infra" name="platform/external/adt-infra" groups="adt-infra,notdefault" />
   <project path="external/android-clat" name="platform/external/android-clat" groups="pdk-cw-fs,pdk-fs" />
@@ -389,7 +383,6 @@
   <project path="ndk" name="platform/ndk" groups="generic_fs" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/apps/Browser2" name="platform/packages/apps/Browser2" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" groups="pdk-fs" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" groups="pdk-fs" />
   <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" groups="pdk-fs" />
@@ -401,15 +394,12 @@
   <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" groups="pdk-fs" />
   <project path="packages/apps/DevCamera" name="platform/packages/apps/DevCamera" groups="pdk" />
   <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" groups="pdk-fs" />
-  <project path="packages/apps/Email" name="platform/packages/apps/Email" groups="pdk-fs" />
   <project path="packages/apps/EmergencyInfo" name="platform/packages/apps/EmergencyInfo" />
   <project path="packages/apps/ExactCalculator" name="platform/packages/apps/ExactCalculator" groups="pdk-fs" />
   <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" groups="pdk-fs" />
   <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" groups="pdk-fs" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" groups="pdk-fs" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" groups="pdk-fs" />
-  <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" groups="pdk-fs" />
-  <project path="packages/apps/Launcher3" name="platform/packages/apps/Launcher3" groups="pdk-fs" />
   <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" groups="pdk-fs" />
   <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" groups="pdk-fs" />
   <project path="packages/apps/Messaging" name="platform/packages/apps/Messaging" groups="pdk-fs" />
@@ -433,7 +423,6 @@
   <project path="packages/apps/Test/connectivity" name="platform/packages/apps/Test/connectivity" />
   <project path="packages/apps/TvSettings" name="platform/packages/apps/TvSettings" groups="generic_fs" />
   <project path="packages/apps/TV" name="platform/packages/apps/TV" />
-  <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" groups="pdk-fs" />
   <project path="packages/experimental" name="platform/packages/experimental" />
   <project path="packages/inputmethods/LatinIME" name="platform/packages/inputmethods/LatinIME" groups="pdk-fs" />
   <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" groups="pdk-fs" />
@@ -468,18 +457,6 @@
   <project path="prebuilts/devtools" name="platform/prebuilts/devtools" groups="pdk-fs" clone-depth="1" />
   <project path="prebuilts/eclipse" name="platform/prebuilts/eclipse" groups="pdk" clone-depth="1" />
   <project path="prebuilts/eclipse-build-deps" name="platform/prebuilts/eclipse-build-deps" groups="notdefault,eclipse" clone-depth="1" />
-  <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,darwin,arm" clone-depth="1" />
-  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" groups="pdk,darwin,arm" clone-depth="1" />
-  <project path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" groups="pdk,darwin" clone-depth="1" />
-  <project path="prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" groups="pdk,darwin,mips" clone-depth="1" />
-  <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" groups="pdk,darwin,x86" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" groups="pdk,linux,arm" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" groups="pdk,linux" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" groups="pdk,linux" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" groups="pdk-fs" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" groups="pdk,linux,mips" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="pdk,linux,x86" clone-depth="1" />
   <project path="prebuilts/gdb/darwin-x86" name="platform/prebuilts/gdb/darwin-x86" groups="darwin" clone-depth="1" />
   <project path="prebuilts/gdb/linux-x86" name="platform/prebuilts/gdb/linux-x86" groups="linux" clone-depth="1" />
   <project path="prebuilts/go/darwin-x86" name="platform/prebuilts/go/darwin-x86" groups="darwin,tradefed" clone-depth="1" />
@@ -532,5 +509,13 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/test/connectivity" name="platform/tools/test/connectivity" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
+
+  <!--StonedOSP Additions-->
+
+  <!--UberTC-->
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.0" name="arm-eabi-7.0" remote="uber" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-6.x" name="arm-linux-androideabi-6.x" remote="uber" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="aarch64-linux-android-4.9" remote="uber" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-7.0-kernel" name="aarch64-linux-android-7.0-kernel" remote="uber" revision="master" />
 
 </manifest>
