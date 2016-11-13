@@ -9,11 +9,11 @@
 
   <remote  name="stoned"
            fetch="https://github.com/StonedOSP"
-           revision="n" />
+           revision="7.0" />
 
   <remote  name="papers"
            fetch="https://github.com/Stoned-Devices"
-           revision="n" />
+           revision="7.0" />
 
   <remote  name="github"
            fetch="https://github.com" />
