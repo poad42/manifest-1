@@ -21,7 +21,7 @@
   <remote  name="uber"
            fetch="https://bitbucket.org/DespairFactor"/>
 
-  <default revision="refs/tags/LA.UM.5.5.r1-00500-8x96.0"
+  <default revision="refs/tags/LA.UM.5.5.r1-01600-8x96.0"
            remote="caf"
            sync-j="8" />
 
