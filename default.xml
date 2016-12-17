@@ -25,9 +25,6 @@
            remote="caf"
            sync-j="8" />
 
-  <project path="build" name="platform/build" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
   <project path="build/blueprint" name="platform/build/blueprint" />
   <project path="build/kati" name="platform/build/kati" />
   <project path="build/soong" name="platform/build/soong" >
@@ -224,7 +221,6 @@
   <project path="external/nfacct" name="platform/external/nfacct" />
   <project path="external/nist-pkits" name="platform/external/nist-pkits" />
   <project path="external/nist-sip" name="platform/external/nist-sip" />
-  <project path="external/noto-fonts" name="platform/external/noto-fonts" />
   <project path="external/oauth" name="platform/external/oauth" />
   <project path="external/objenesis" name="platform/external/objenesis" />
   <project path="external/okhttp" name="platform/external/okhttp" />
@@ -292,7 +288,6 @@
   <project path="external/zopfli" name="platform/external/zopfli" />
   <project path="external/zxing" name="platform/external/zxing" />
   <project path="frameworks/av" name="platform/frameworks/av" />
-  <project path="frameworks/base" name="platform/frameworks/base" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" />
@@ -369,38 +364,25 @@
   <project path="libnativehelper" name="platform/libnativehelper" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
-  <project path="packages/apps/Browser2" name="platform/packages/apps/Browser2" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
-  <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
-  <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" />
   <project path="packages/apps/CarrierConfig" name="platform/packages/apps/CarrierConfig" />
   <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
-  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
-  <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" />
   <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
-  <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" />
   <project path="packages/apps/EmergencyInfo" name="platform/packages/apps/EmergencyInfo" />
-  <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
-  <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
   <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" />
-  <project path="packages/apps/Messaging" name="platform/packages/apps/Messaging" />
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
   <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" />
-  <project path="packages/apps/PhoneCommon" name="platform/packages/apps/PhoneCommon" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/SafetyRegulatoryInfo" name="platform/packages/apps/SafetyRegulatoryInfo" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
-  <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
   <project path="packages/apps/StorageManager" name="platform/packages/apps/StorageManager" />
-  <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />
   <project path="packages/apps/Terminal" name="platform/packages/apps/Terminal" />
   <project path="packages/apps/Test/connectivity" name="platform/packages/apps/Test/connectivity" />
   <project path="packages/apps/TvSettings" name="platform/packages/apps/TvSettings" />
@@ -411,7 +393,6 @@
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" />
   <project path="packages/providers/BlockedNumberProvider" name="platform/packages/providers/BlockedNumberProvider" />
   <project path="packages/providers/BookmarkProvider" name="platform/packages/providers/BookmarkProvider" />
-  <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" />
   <project path="packages/providers/CallLogProvider" name="platform/packages/providers/CallLogProvider" />
   <project path="packages/providers/ContactsProvider" name="platform/packages/providers/ContactsProvider" />
   <project path="packages/providers/DownloadProvider" name="platform/packages/providers/DownloadProvider" />
@@ -427,7 +408,6 @@
   <project path="packages/services/Mms" name="platform/packages/services/Mms" />
   <project path="packages/services/Telecomm" name="platform/packages/services/Telecomm" />
   <project path="packages/services/Telephony" name="platform/packages/services/Telephony" />
-  <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" />
   <project path="pdk" name="platform/pdk" />
   <project path="platform_testing" name="platform/platform_testing" />
   <project path="prebuilts/android-emulator" name="platform/prebuilts/android-emulator" clone-depth="1" />
@@ -484,7 +464,6 @@
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/nvram" name="platform/system/nvram" />
   <project path="system/security" name="platform/system/security" />
-  <project path="system/sepolicy" name="platform/system/sepolicy" />
   <project path="system/tools/aidl" name="platform/system/tools/aidl" />
   <project path="system/tpm" name="platform/system/tpm" />
   <project path="system/update_engine" name="platform/system/update_engine" />
@@ -495,5 +474,33 @@
   <project path="tools/external/fat32lib" name="platform/tools/external/fat32lib" />
   <project path="tools/external/gradle" name="platform/tools/external/gradle" />
   <project path="tools/test/connectivity" name="platform/tools/test/connectivity" />
+
+  <!--StonedOSP Additions-->
+  <project path="packages/apps/Calendar" name="apps_calendar" remote="stoned" />
+  <project path="packages/apps/CalendarWidget" name="apps_calendarwidget" remote="stoned" />
+  <project path="packages/apps/Contacts" name="apps_contacts" remote="stoned" />
+  <project path="packages/apps/ContactsCommon" name="apps_contactscommon" remote="stoned" />
+  <project path="packages/apps/Dialer" name="apps_dialer" remote="stoned" />
+  <project path="packages/apps/Gallery2" name="apps_gallery2" remote="stoned" />
+  <project path="packages/apps/masquerade" name="TeamSubstratum/masquerade" remote="github" revision="master" />
+  <project path="packages/apps/Messaging" name="apps_messaging" remote="stoned" />
+  <project path="packages/apps/OmniSwitch" name="apps_omniswitch" remote="stoned" />
+  <project path="packages/apps/PhoneCommon" name="apps_phonecommon" remote="stoned" />
+  <project path="packages/apps/Settings" name="apps_settings" remote="stoned" />
+  <project path="packages/apps/SmokeShop" name="apps_smokeshop" remote="stoned" />
+  <project path="packages/apps/Snap" name="apps_snap" remote="stoned" />
+  <project path="packages/apps/Stk" name="apps_stk" remote="stoned" />
+  <project path="packages/apps/Tag" name="apps_tag" remote="stoned" />
+  <project path="build" name="build" remote="stoned" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="external/noto-fonts" name="external_noto-fonts" remote="stoned" />
+  <project path="frameworks/base" name="frameworks_base" remote="stoned" />
+  <project path="frameworks/native" name="frameworks_native" remote="stoned" />
+  <project path="packages/providers/CalendarProvider" name="providers_calendarprovider" remote="stoned" />
+  <project path="packages/providers/MediaProvider" name="providers_mediaprovider" remote="stoned" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="stoned" />
+  <project path="vendor/stoned" name="vendor_stoned" remote="stoned" />
+  <project path="packages/wallpapers/LivePicker" name="wallpapers_livepicker" />
 
 </manifest>
