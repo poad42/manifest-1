@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="caf"
-           fetch="https://source.codeaurora.org/quic/la/" />
-
   <remote  name="aosp"
            fetch="https://android.googlesource.com" />
 
@@ -21,8 +18,10 @@
   <remote  name="uber"
            fetch="https://bitbucket.org/DespairFactor"/>
 
-  <default revision="refs/tags/LA.UM.5.5.r1-02200-8x96.0"
-           remote="caf"
+  <default revision="refs/tags/android-7.1.1_r6"
+           sync-c="true"
+           sync-f="true"
+           remote="aosp"
            sync-j="8" />
 
   <project path="build/blueprint" name="platform/build/blueprint" />
