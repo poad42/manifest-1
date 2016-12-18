@@ -294,7 +294,6 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" />
   <project path="frameworks/ml" name="platform/frameworks/ml" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" />
-  <project path="frameworks/native" name="platform/frameworks/native" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
