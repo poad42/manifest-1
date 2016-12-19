@@ -15,11 +15,14 @@
   <remote  name="github"
            fetch="https://github.com" />
 
-  <remote  name="bb"
-           fetch="http://bitbucket.org/"/>
+  <remote  name="uber"
+           fetch="https://bitbucket.org/mdalexca"/>
 
- <default revision = "master"
-          remote = "aosp" />
+  <default revision="refs/tags/android-7.1.1_r6"
+           sync-c="true"
+           sync-f="true"
+           remote="aosp"
+           sync-j="8" />
 
    <!--AOSP -->
   <project path="build/blueprint" name="platform/build/blueprint" />
@@ -388,6 +391,9 @@
   <project path="prebuilts/deqp" name="platform/prebuilts/deqp" />
   <project path="prebuilts/devtools" name="platform/prebuilts/devtools" />
   <project path="prebuilts/eclipse" name="platform/prebuilts/eclipse" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" />
+  <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" />
   <project path="prebuilts/gdb/darwin-x86" name="platform/prebuilts/gdb/darwin-x86" />
   <project path="prebuilts/gdb/linux-x86" name="platform/prebuilts/gdb/linux-x86" />
   <project path="prebuilts/go/darwin-x86" name="platform/prebuilts/go/darwin-x86" />
@@ -461,12 +467,9 @@
   <project path="device/qcom/common" name="device_qcom_common" remote="stoned" />
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="stoned" />
   <!--UberTC-->
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.x" name="mdalexca/aarch64-linux-android-6.x" remote="bb" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-6.x" name="mdalexca/arm-eabi-6.x" remote="bb" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-6.x" name="uberroms/arm-linux-androideabi-6.x" remote="bb" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" />
-  <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" groups="pdk,linux,mips" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.x" name="aarch64-linux-android-6.x" remote="uber" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-6.x" name="arm-eabi-6.x" remote="uber" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-6.x" name="arm-linux-androideabi-6.x" remote="uber" />
 
    <!-- HALs -->
   <project path="hardware/akm" name="platform/hardware/akm" />
@@ -503,7 +506,7 @@
   <project path="external/ant-wireless/ant_service" name="CyanogenMod/android_external_ant-wireless_ant_service" remote="github" revision="cm-14.1" />
   <project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="github" revision="cm-14.1" />
   <project path="external/brctl" name="CyanogenMod/android_external_brctl" remote="github" revision="cm-14.1" />
-  <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" revision="cm-14.1" groups="pdk" />
+  <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" revision="cm-14.1" />
   <project path="external/ebtables" name="CyanogenMod/android_external_ebtables" remote="github" revision="cm-14.1" />
   <project path="external/exfat" name="CyanogenMod/android_external_exfat" remote="github" revision="cm-14.1" />
   <project path="external/f2fs-tools" name="CyanogenMod/android_external_f2fs-tools" groups="pdk" remote="github" revision="cm-14.1" />
@@ -513,17 +516,17 @@
   <project path="external/json-c" name="CyanogenMod/android_external_json-c" remote="github" revision="cm-14.1" />
   <project path="external/libncurses" name="CyanogenMod/android_external_libncurses" remote="github" revision="cm-14.1" />
   <project path="external/libnetfilter_conntrack" name="CyanogenMod/android_external_libnetfilter_conntrack" remote="github" revision="cm-14.1" />
-  <project path="external/libnfc-nci" name="CyanogenMod/android_external_libnfc-nci" groups="pdk" remote="github" revision="cm-14.1" />
-  <project path="external/libnfc-nxp" name="CyanogenMod/android_external_libnfc-nxp" groups="pdk" remote="github" revision="cm-14.1" />
+  <project path="external/libnfc-nci" name="CyanogenMod/android_external_libnfc-nci" remote="github" revision="cm-14.1" />
+  <project path="external/libnfc-nxp" name="CyanogenMod/android_external_libnfc-nxp" remote="github" revision="cm-14.1" />
   <project path="external/libnfnetlink" name="CyanogenMod/android_external_libnfnetlink" remote="github" revision="cm-14.1" />
   <project path="external/ntfs-3g" name="CyanogenMod/android_external_ntfs-3g" remote="github" revision="cm-14.1" />
   <project path="external/powertop" name="CyanogenMod/android_external_powertop" remote="github" revision="cm-14.1" />
   <project path="external/protobuf-c" name="CyanogenMod/android_external_protobuf-c" remote="github" revision="cm-14.1" />
   <project path="external/stagefright-plugins" name="CyanogenMod/android_external_stagefright-plugins" remote="github" revision="cm-14.1" />
-  <project path="external/wpa_supplicant_8" name="CyanogenMod/android_external_wpa_supplicant_8" groups="pdk" remote="github" revision="cm-14.1" />
-  <project path="frameworks/opt/net/ims" name="CyanogenMod/android_frameworks_opt_net_ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" remote="github" revision="cm-14.1" />
-  <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" remote="github" revision="cm-14.1" />
-  <project path="system/qcom" name="CyanogenMod/android_system_qcom" groups="qcom" remote="github" revision="cm-14.1" />
+  <project path="external/wpa_supplicant_8" name="CyanogenMod/android_external_wpa_supplicant_8" remote="github" revision="cm-14.1" />
+  <project path="frameworks/opt/net/ims" name="CyanogenMod/android_frameworks_opt_net_ims" remote="github" revision="cm-14.1" />
+  <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" revision="cm-14.1" />
+  <project path="system/qcom" name="CyanogenMod/android_system_qcom" remote="github" revision="cm-14.1" />
 
   <!-- Vendors -->
   <project path="vendor/codeaurora/telephony" name="CyanogenMod/android_vendor_codeaurora_telephony" remote="github" revision="cm-14.1" />
