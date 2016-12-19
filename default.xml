@@ -15,15 +15,13 @@
   <remote  name="github"
            fetch="https://github.com" />
 
-  <remote  name="uber"
-           fetch="https://bitbucket.org/mdalexca"/>
+  <remote  name="bb"
+           fetch="http://bitbucket.org/"/>
 
-  <default revision="refs/tags/android-7.1.1_r6"
-           sync-c="true"
-           sync-f="true"
-           remote="aosp"
-           sync-j="8" />
+ <default revision = "master"
+          remote = "aosp" />
 
+   <!--AOSP -->
   <project path="build/blueprint" name="platform/build/blueprint" />
   <project path="build/kati" name="platform/build/kati" />
   <project path="build/soong" name="platform/build/soong" >
@@ -34,7 +32,6 @@
   <project path="art" name="platform/art" />
   <project path="bionic" name="platform/bionic" />
   <project path="bootable/recovery" name="platform/bootable/recovery" />
-  <project path="compatibility/cdd" name="platform/compatibility/cdd" />
   <project path="cts" name="platform/cts" />
   <project path="dalvik" name="platform/dalvik" />
   <project path="developers/build" name="platform/developers/build" />
@@ -88,7 +85,6 @@
   <project path="external/drm_gralloc" name="platform/external/drm_gralloc" />
   <project path="external/drm_hwcomposer" name="platform/external/drm_hwcomposer" />
   <project path="external/droiddriver" name="platform/external/droiddriver" />
-  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" />
   <project path="external/easymock" name="platform/external/easymock" />
   <project path="external/eclipse-basebuilder" name="platform/external/eclipse-basebuilder" />
   <project path="external/eclipse-windowbuilder" name="platform/external/eclipse-windowbuilder" />
@@ -98,7 +94,6 @@
   <project path="external/esd" name="platform/external/esd" />
   <project path="external/expat" name="platform/external/expat" />
   <project path="external/eyes-free" name="platform/external/eyes-free" />
-  <project path="external/f2fs-tools" name="platform/external/f2fs-tools" />
   <project path="external/fdlibm" name="platform/external/fdlibm" />
   <project path="external/fec" name="platform/external/fec" />
   <project path="external/fio" name="platform/external/fio" />
@@ -171,8 +166,6 @@
   <project path="external/libmicrohttpd" name="platform/external/libmicrohttpd" />
   <project path="external/libmpeg2" name="platform/external/libmpeg2" />
   <project path="external/libmtp" name="platform/external/libmtp" />
-  <project path="external/libnfc-nci" name="platform/external/libnfc-nci" />
-  <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" />
   <project path="external/libnl" name="platform/external/libnl" />
   <project path="external/libogg" name="platform/external/libogg" />
   <project path="external/libopus" name="platform/external/libopus" />
@@ -279,7 +272,6 @@
   <project path="external/vulkan-validation-layers" name="platform/external/vulkan-validation-layers" />
   <project path="external/webp" name="platform/external/webp" />
   <project path="external/webrtc" name="platform/external/webrtc" />
-  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" />
   <project path="external/xmlrpcpp" name="platform/external/xmlrpcpp" />
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
@@ -303,7 +295,6 @@
   <project path="frameworks/opt/inputconnectioncommon" name="platform/frameworks/opt/inputconnectioncommon" />
   <project path="frameworks/opt/inputmethodcommon" name="platform/frameworks/opt/inputmethodcommon" />
   <project path="frameworks/opt/net/ethernet" name="platform/frameworks/opt/net/ethernet" />
-  <project path="frameworks/opt/net/ims" name="platform/frameworks/opt/net/ims" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" />
   <project path="frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
@@ -317,11 +308,6 @@
   <project path="frameworks/volley" name="platform/frameworks/volley" />
   <project path="frameworks/webview" name="platform/frameworks/webview" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" />
-  <project path="hardware/akm" name="platform/hardware/akm" />
-  <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" />
-  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
-  <project path="hardware/bsp/intel" name="platform/hardware/bsp/intel" />
-  <project path="hardware/google/apf" name="platform/hardware/google/apf" />
   <project path="hardware/intel/audio_media" name="platform/hardware/intel/audio_media" />
   <project path="hardware/intel/bootstub" name="platform/hardware/intel/bootstub" />
   <project path="hardware/intel/common/bd_prov" name="platform/hardware/intel/common/bd_prov" />
@@ -336,18 +322,9 @@
   <project path="hardware/intel/img/psb_headers" name="platform/hardware/intel/img/psb_headers" />
   <project path="hardware/intel/img/psb_video" name="platform/hardware/intel/img/psb_video" />
   <project path="hardware/intel/sensors" name="platform/hardware/intel/sensors" />
-  <project path="hardware/invensense" name="platform/hardware/invensense" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" />
-  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" />
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" />
   <project path="hardware/qcom/bootctrl" name="platform/hardware/qcom/bootctrl" />
-  <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" />
-  <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" />
-  <project path="hardware/qcom/display" name="platform/hardware/qcom/display" />
-  <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" />
-  <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" />
-  <project path="hardware/qcom/media" name="platform/hardware/qcom/media" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" />
   <project path="hardware/qcom/msm8994" name="platform/hardware/qcom/msm8994" />
   <project path="hardware/qcom/msm8996" name="platform/hardware/qcom/msm8996" />
@@ -355,8 +332,6 @@
   <project path="hardware/qcom/msm8x27" name="platform/hardware/qcom/msm8x27" />
   <project path="hardware/qcom/msm8x84" name="platform/hardware/qcom/msm8x84" />
   <project path="hardware/qcom/power" name="platform/hardware/qcom/power" />
-  <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" />
-  <project path="hardware/ril" name="platform/hardware/ril" />
   <project path="libcore" name="platform/libcore" />
   <project path="libnativehelper" name="platform/libnativehelper" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
@@ -371,7 +346,6 @@
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
   <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" />
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
-  <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" />
@@ -464,7 +438,7 @@
   <project path="packages/apps/ContactsCommon" name="apps_contactscommon" remote="stoned" />
   <project path="packages/apps/Dialer" name="apps_dialer" remote="stoned" />
   <project path="packages/apps/Gallery2" name="apps_gallery2" remote="stoned" />
-  <project path="packages/apps/masquerade" name="TeamSubstratum/masquerade" remote="github" revision="master" />
+  <project path="packages/apps/masquerade" name="TeamSubstratum/masquerade" remote="github" revision="n" />
   <project path="packages/apps/Messaging" name="apps_messaging" remote="stoned" />
   <project path="packages/apps/OmniSwitch" name="apps_omniswitch" remote="stoned" />
   <project path="packages/apps/PhoneCommon" name="apps_phonecommon" remote="stoned" />
@@ -484,13 +458,14 @@
   <project path="packages/providers/MediaProvider" name="providers_mediaprovider" remote="stoned" />
   <project path="system/sepolicy" name="system_sepolicy" remote="stoned" />
   <project path="vendor/stoned" name="vendor_stoned" remote="stoned" />
-  <project path="packages/wallpapers/LivePicker" name="wallpapers_livepicker" />
 
   <!--UberTC-->
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.0" name="arm-eabi-7.0" remote="uber" revision="master" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-6.x" name="arm-linux-androideabi-6.x" remote="uber" revision="master" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="aarch64-linux-android-4.9" remote="uber" revision="master" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-7.0-kernel" name="aarch64-linux-android-7.0-kernel" remote="uber" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.x" name="mdalexca/aarch64-linux-android-6.x" remote="bb" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-6.x" name="mdalexca/arm-eabi-6.x" remote="bb" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-6.x" name="uberroms/arm-linux-androideabi-6.x" remote="bb" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" />
+  <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" groups="pdk,linux,mips" />
 
    <!-- HALs -->
   <project path="hardware/akm" name="platform/hardware/akm" />
@@ -522,4 +497,42 @@
   <project path="hardware/qcom/wlan" name="CyanogenMod/android_hardware_qcom_wlan" groups="qcom_wlan" remote="github" revision="cm-14.1" />
   <project path="hardware/qcom/wlan-caf" name="CyanogenMod/android_hardware_qcom_wlan" groups="qcom_wlan" remote="github" revision="cm-14.1-caf" />
   
+   <!-- CM -->
+  <project path="external/ant-wireless/ant_native" name="CyanogenMod/android_external_ant-wireless_ant_native" remote="github" revision="cm-14.1" />
+  <project path="external/ant-wireless/ant_service" name="CyanogenMod/android_external_ant-wireless_ant_service" remote="github" revision="cm-14.1" />
+  <project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="github" revision="cm-14.1" />
+  <project path="external/brctl" name="CyanogenMod/android_external_brctl" remote="github" revision="cm-14.1" />
+  <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" revision="cm-14.1" groups="pdk" />
+  <project path="external/ebtables" name="CyanogenMod/android_external_ebtables" remote="github" revision="cm-14.1" />
+  <project path="external/exfat" name="CyanogenMod/android_external_exfat" remote="github" revision="cm-14.1" />
+  <project path="external/f2fs-tools" name="CyanogenMod/android_external_f2fs-tools" groups="pdk" remote="github" revision="cm-14.1" />
+  <project path="external/ffmpeg" name="CyanogenMod/android_external_ffmpeg" remote="github" revision="cm-14.1" />
+  <project path="external/fuse" name="CyanogenMod/android_external_fuse" remote="github" revision="cm-14.1" />
+  <project path="external/gson" name="CyanogenMod/android_external_gson" remote="github" revision="cm-14.1" />
+  <project path="external/json-c" name="CyanogenMod/android_external_json-c" remote="github" revision="cm-14.1" />
+  <project path="external/libncurses" name="CyanogenMod/android_external_libncurses" remote="github" revision="cm-14.1" />
+  <project path="external/libnetfilter_conntrack" name="CyanogenMod/android_external_libnetfilter_conntrack" remote="github" revision="cm-14.1" />
+  <project path="external/libnfc-nci" name="CyanogenMod/android_external_libnfc-nci" groups="pdk" remote="github" revision="cm-14.1" />
+  <project path="external/libnfc-nxp" name="CyanogenMod/android_external_libnfc-nxp" groups="pdk" remote="github" revision="cm-14.1" />
+  <project path="external/libnfnetlink" name="CyanogenMod/android_external_libnfnetlink" remote="github" revision="cm-14.1" />
+  <project path="external/ntfs-3g" name="CyanogenMod/android_external_ntfs-3g" remote="github" revision="cm-14.1" />
+  <project path="external/powertop" name="CyanogenMod/android_external_powertop" remote="github" revision="cm-14.1" />
+  <project path="external/protobuf-c" name="CyanogenMod/android_external_protobuf-c" remote="github" revision="cm-14.1" />
+  <project path="external/stagefright-plugins" name="CyanogenMod/android_external_stagefright-plugins" remote="github" revision="cm-14.1" />
+  <project path="external/wpa_supplicant_8" name="CyanogenMod/android_external_wpa_supplicant_8" groups="pdk" remote="github" revision="cm-14.1" />
+  <project path="frameworks/opt/net/ims" name="CyanogenMod/android_frameworks_opt_net_ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" remote="github" revision="cm-14.1" />
+  <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" remote="github" revision="cm-14.1" />
+  <project path="system/qcom" name="CyanogenMod/android_system_qcom" groups="qcom" remote="github" revision="cm-14.1" />
+
+  <!-- Vendors -->
+  <project path="vendor/codeaurora/telephony" name="CyanogenMod/android_vendor_codeaurora_telephony" remote="github" revision="cm-14.1" />
+  <project path="vendor/nxp-nfc/opensource/frameworks" name="CyanogenMod/android_vendor_nxp-nfc_opensource_frameworks" remote="github" revision="cm-14.1" />
+  <project path="vendor/nxp-nfc/opensource/libnfc-nci" name="CyanogenMod/android_vendor_nxp-nfc_opensource_libnfc-nci" remote="github" revision="cm-14.1" />
+  <project path="vendor/nxp-nfc/opensource/Nfc" name="CyanogenMod/android_vendor_nxp-nfc_opensource_Nfc" remote="github" revision="cm-14.1" />
+  <project path="vendor/qcom/binaries" name="AOSP-JF-MM/proprietary_vendor_qcom_binaries" remote="github" revision="aosp-7.1.1" />
+  <project path="vendor/qcom/opensource/bluetooth" name="CyanogenMod/android_vendor_qcom_opensource_bluetooth" remote="github" revision="cm-14.1" />
+  <project path="vendor/qcom/opensource/dataservices/" name="CyanogenMod/android_vendor_qcom_opensource_dataservices" remote="github" revision="cm-14.1"/>
+  <project path="vendor/qcom/opensource/dpm/" name="CyanogenMod/android_vendor_qcom_opensource_dpm" remote="github" revision="cm-14.1"/>
+  <project path="vendor/qcom/opensource/time-services/" name="CyanogenMod/android_vendor_qcom_opensource_time-services" remote="github" revision="cm-14.1"/>
+    
 </manifest>
