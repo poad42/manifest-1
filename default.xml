@@ -415,7 +415,6 @@
   <project path="system/firewalld" name="platform/system/firewalld" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" />
   <project path="system/keymaster" name="platform/system/keymaster" />
-  <project path="system/media" name="platform/system/media" />
   <project path="system/nativepower" name="platform/system/nativepower" />
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/nvram" name="platform/system/nvram" />
@@ -458,7 +457,9 @@
   <project path="packages/providers/MediaProvider" name="providers_mediaprovider" remote="stoned" />
   <project path="system/sepolicy" name="system_sepolicy" remote="stoned" />
   <project path="vendor/stoned" name="vendor_stoned" remote="stoned" />
-
+  <project path="system/media" name="system_media" remote="stoned" />
+  <project path="device/qcom/common" name="device_qcom_common" remote="stoned" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="stoned" />
   <!--UberTC-->
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.x" name="mdalexca/aarch64-linux-android-6.x" remote="bb" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-6.x" name="mdalexca/arm-eabi-6.x" remote="bb" />
